@@ -1,4 +1,4 @@
-﻿/* Prepare a Result Sheet of a student taking input of four subjects and output result with pass 
+/* Prepare a Result Sheet of a student taking input of four subjects and output result with pass 
 division and failed subjects for unsuccessful candidates. */
 
 #include <stdio.h>
@@ -12,14 +12,20 @@ int main()
 	{
 		printf("enter mark in %s: ",subjects[i]);
 		scanf("%d",&marks[i]);
+		
+		if(marks[i] > 100)
+		{
+			printf("mark can't be more than 100");
+			exit(0);
+		}
 	}
-	
 	
 	int sum = 0, flag = 0;
 	
 	for(int i=0;i<4;i++)
 	{
 		sum += marks[i];
+		
 		if(marks[i] < 35)
 		{
 			printf("you failed in %s\n",subjects[i]);
