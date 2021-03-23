@@ -2,11 +2,6 @@
 
 #include <stdio.h>
 
-void display(int matrix[100][100], int m, int n)
-{
-	
-}
-
 int main()
 {
 	int m, n;
