@@ -16,7 +16,7 @@ int main()
 	
 	while(*ptr != '\0')
 	{
-		printf("storage location of %c = %x\n",*ptr, ptr);
+		printf("storage location of %c = %lu\n",*ptr, ptr);
 		len++;
 		ptr++;
 	}
