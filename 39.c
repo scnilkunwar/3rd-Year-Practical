@@ -1,4 +1,4 @@
-﻿/* Take input any word. Find storage location of each letter in that word. Find the length of this 
+/* Take input any word. Find storage location of each letter in that word. Find the length of this 
 word using pointer but not the strlen() function. */
 
 #include <stdio.h>
@@ -8,16 +8,19 @@ int main()
 	char word[20];
 	
 	printf("enter a word: ");
-	scanf("%s",word);
+	gets(word);
 	
-	int i=0;
-	while(word[i] != '\0')
+	
+	char *ptr = word;
+	int len = 0;
+	
+	while(*ptr != '\0')
 	{
-		printf("storage location of %c = %x\n",*(word+ i), word+i);
-		i++;
+		printf("storage location of %c = %x\n",*ptr, ptr);
+		len++;
+		ptr++;
 	}
 	
-	int len = ((word + i) - word) / sizeof(char);
-	printf("%d",len);
+	printf("lenght of word = %d",len);
 	return 0;
 }
